@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
+    <link rel = "stylesheet" href = "location.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src = "location.js"></script>
+</head>
+<body onload="setstats();">
+
+<h1 id = "titlestats"> Player 'Infinite' Scores </h1>
+
+<div class="Row">
+    <div class="Column" id = "highest">1</div>
+    <div class="Column" id = "lowest">2</div>
+    <div class="Column" id = "avg">3</div>
+</div>
+
+<canvas id="chart" style="width:60%;max-width:60%"></canvas>
+<div class = "button"> <button type="button" id = "return" onclick = "clickreturn()" class="btn btn-primary btn-sm"> Return </button> </div>
+
+</body>
+<script>
+    const xValues = JSON.parse(localStorage.getItem("roundnumberarray"));
+    console.log(xValues);
+    const yValues = JSON.parse(localStorage.getItem("player_scores"));
+    console.log(yValues);
+
+
+    new Chart("chart", {
+        type: "line",
+        backgroundColor: "white",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "white",
+                borderColor: "black",
+                data: yValues,
+            }]
+        },
+        options: {
+            legend: {display: false},
+
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontSize: 20,
+                        fontColor: 'black',
+                        fontStyle: "bold",
+                    },
+                        scaleLabel: {
+                        fontSize: 20,
+                        display: true,
+                        labelString: 'Score',
+                        fontColor: 'black',
+                        fontStyle: "bold",
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 20,
+                        fontColor: 'black',
+                        fontStyle: "bold"
+                    },
+                    scaleLabel: {
+                        fontSize: 20,
+                        display: true,
+                        labelString: 'Round',
+                        fontColor: 'black',
+                        fontStyle: "bold",
+                    }
+                }]
+
+            },
+                font :{
+                    fontStyle: "bold",
+                }
+        }
+    });
+</script>
+
+</html>

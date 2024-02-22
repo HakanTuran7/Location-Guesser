@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS408 Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/home/tjb20138/DEVWEB/2023/CS408">
+    <link rel = "stylesheet" href = "location.css">
+    <script src = "location.js"></script>
+</head>
+<body onload="playerinstantiate(); resetinfiniterounds();">
+<div class = "container">
+<div class = "iconclass"> <img id = "iconimage" src = "lg icon.png"> </div>
+<div class = "title"> <h1> Location Guesser </h1> </div>
+<div class = "button"> <button type="button" id = "play" onclick = "clickplaybutton();" class="btn btn-primary btn-lg"> Play </button> </div>
+<div class = "button"> <button type="button" id = "quit" onclick = closetab() class="btn btn-primary btn-lg"> Quit </button> </div>
+</div>
+<div>
+    <div class = "button"> <button type="button" id = "statbutton" onclick = clickstats() class="btn btn-primary btn-sm"> Player Stats </button> </div>
+</div>
+</body>
+</html>

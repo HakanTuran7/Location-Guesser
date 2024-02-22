@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS408 Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
+    <link rel = "stylesheet" href = "location.css">
+    <script src = "location.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body onload = "instanteplayerscore(); resetround();" >
+<div class = "container">
+    <div class = "title"> <h2 id = "difficultytitle"> Select Difficulty</h2> </div>
+    <div class = "button"> <button type="button" id = "easy" onclick = "clickedifficultybutton(); easydifficulty();" class="btn btn-primary btn-sm"> Easy </button> </div>
+    <div class = "button"> <button type="button" id = "medium" onclick = "clickedifficultybutton(); mediumdifficulty();" class="btn btn-primary btn-sm"> Medium </button> </div>
+    <div class = "button"> <button type="button" id = "hard" onclick = "clickedifficultybutton(); harddifficulty();" class="btn btn-primary btn-sm"> Hard </button> </div>
+</div>
+<div class = container>
+<div id = "infobuttondifficulty">
+    <div class="col-md-12">
+        <div class="info2">
+            <i class="icon-info-sign"></i>
+            <span class="extra-info2">
+                <b>Easy: </b>  60 seconds per round
+             <br>
+                <b> Medium: </b> 30 seconds per round
+             <br>
+                <b> Hard: </b> 10 seconds per round
+             <br>
+             <br>
+            </span>
+        </div><br>
+    </div>
+</div>
+</div>
+</body>
+</html>

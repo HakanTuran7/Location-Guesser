@@ -1,0 +1,459 @@
+/*-----Default----*/
+body{
+    background-color: dodgerblue;
+}
+
+#container{
+    width: 100%;
+    vertical-align: middle;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+/*---------------------------index.html------------------------*/
+.container{
+    width: 100%;
+    vertical-align: middle;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    text-align: center;
+}
+
+h1{
+    text-align:center;
+    font-size: 12vh;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.5vh;
+    -webkit-text-stroke-color: black;
+}
+
+#iconimage{
+    display: block;
+    margin: 0 auto;
+    width: 35vh;
+    height: 32vh;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3.5vh;
+}
+
+#statbutton{
+    width: 20vh;
+    height: 6.5vh;
+    font-size: 2.5vh;
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    background-color: lightblue;
+}
+
+.btn-primary {
+    width: 25vh;
+    height: 10vh;
+    border-color: Black;
+    border-width: 0.8vh;
+    background-color: white;
+    color: black;
+    font-size: 4vh;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
+/*---------------------------gamemode.html------------------------*/
+/*------ gamemode icon----------*/
+.extra-info3 {
+    display: none;
+    line-height: 2.2vh;
+    font-size: 1.4vh;
+    position: relative;
+    top: 1vh;
+}
+
+.info3:hover .extra-info3 {
+    display: block;
+}
+
+.info3 {
+    font-size: 3.5vh;
+    border-radius: 1.2vh;
+    position: relative;
+    width: 5%;
+    left:50%;
+    top:50%;
+    Transform: translate(-50%, -50%);
+    margin-top: 3.5vh;
+}
+
+.info3:hover {
+    background-color: white;
+    width: 40vh;
+    text-align: center;
+}
+
+#infobuttongamemode{
+    align-content: center;
+}
+
+#block_container {
+    text-align:center;
+}
+
+#countries, #flags {
+    display:inline;
+}
+
+#flagsbutton {
+    font-weight: bold;
+    -webkit-text-stroke: 0.2vh;
+    width: 40vh;
+    height: 40vh;
+    margin: 5vh;
+    margin-top: 8vh;
+    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("https://b.kisscc0.com/20180816/ilq/kisscc0-flags-of-the-world-world-flag-national-flag-international-flags-scene-5b7627861b7735.5560956415344700221125.png");
+
+}
+
+#countriesbutton{
+    -webkit-text-stroke: 0.2vh;
+    font-weight: bold;
+    width: 40vh;
+    height: 40vh;
+    margin: 5vh;
+    margin-top: 8vh;
+    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("https://media.istockphoto.com/id/1390066370/vector/earth-globe-atlantic.jpg?s=612x612&w=0&k=20&c=OSgS4jV5cCOBgk8jv0AUoqawzGhRS6hpBJ496ICELoA=");
+
+}
+
+/*---------------------------difficulty.html------------------------*/
+#difficultytitle{
+    padding-bottom: 2rem;
+}
+
+/*---- difficulty icon----*/
+
+.extra-info2 {
+    display: none;
+    line-height: 2.2vh;
+    font-size: 1.5vh;
+    position: relative;
+    top: 1vh;
+}
+
+.info2:hover .extra-info2 {
+    display: block;
+// border: 2px solid yellow;
+}
+
+.info2 {
+    font-size: 3.5vh;
+    border-radius: 1.2vh;
+    position: relative;
+    width: 5%;
+    left:50%;
+    bottom: 50%;
+    Transform: translate(-50%, -50%);
+    margin-top: 3.5vh;
+}
+
+.info2:hover {
+    background-color: white;
+    width: 30vh;
+    text-align: center;
+}
+
+#infobuttondifficulty{
+// border: 2px solid aquamarine;
+    align-content: center;
+}
+
+/*---------------------------rounds.html------------------------*/
+h2{
+    text-align:center;
+    font-size: 9vh;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.4vh ;
+    -webkit-text-stroke-color: black;
+}
+
+#whiteline{
+    margin-top: 5vh;
+    border-top: 1rem solid white;
+    border-radius: 1rem;
+    width: 35vh;
+}
+
+/*---------------------------imageshown.html------------------------*/
+.container3{
+    width: 100%;
+    vertical-align: middle;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    text-align:center;
+    font-size: 6vh;
+    font-weight: bold;
+    color: white;
+    margin-top: 5vh;
+    -webkit-text-stroke-width: 0.3vh ;
+    -webkit-text-stroke-color: black;
+}
+
+#roundno{
+    margin: 2.5vh;
+}
+
+.img{
+    max-height: 60vh;
+    max-width: 60vw;
+    border: 1vh solid white;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*---------------------------game.html------------------------*/
+.container2{
+    vertical-align: middle;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.image2 {
+    max-width: 70%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    margin: auto;
+}
+
+#countryname{
+    position: relative;
+    background-color: lightblue;
+    width: 100%;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#countryname2{
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin: 1.3vh;
+}
+
+svg path{
+    cursor: pointer;
+}
+
+#Progress {
+    width: 100%;
+    background-color: white;
+}
+
+#Bar {
+    width: 1%;
+    height: 2.5vh;
+    background-color: #04AA6D;
+}
+
+#answer, #playerGuess
+{
+    font-size: 3vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.225rem ;
+    padding: 3rem;
+}
+
+#container2{
+    text-align: center;
+}
+
+#infobutton1, #infobutton2{
+    display:inline;
+}
+
+#chosencountry2{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.05rem ;
+    -webkit-text-stroke-color: black;
+}
+
+/*-------- Information button structure from https://codepen.io/EasyBoarder/pen/LZzzjy ----------*/
+* {
+    transition: all 0.2s ease;
+}
+
+.extra-info {
+    display: none;
+    line-height: 1.9rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 3.5rem;
+}
+
+.info:hover .extra-info {
+    display: block;
+}
+
+.info {
+    font-size: 2rem;
+    padding-left: 0.3rem;
+    width: 1.25rem;
+    border-radius: 1rem;
+}
+
+.info:hover {
+    background-color: white;
+    width: 39rem;
+    text-align: left;
+}
+
+/*---------------------------correctorincorrect.html------------------------*/
+#answer, #playerGuess
+{
+    font-size: 4rem;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.225rem ;
+    padding: 3rem;
+}
+
+#username, #highestscore{
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.1rem ;
+    -webkit-text-stroke-color: black;
+}
+
+#continue{
+    width: 15vh;
+    height: 8vh;
+    font-size: 2vh;
+    border-color: Black;
+    border-width: 0.6vh;
+}
+
+#nextround{
+    width: 20vh;
+    height: 8vh;
+    font-size: 3vh;
+    border-color: Black;
+    border-width: 0.6vh;
+}
+
+#tickorcross {
+    display: block;
+    margin: 0 auto;
+    width: 30vh;
+    height: 30vh;
+    padding-bottom: 2vh;
+}
+
+/*---------------------------endpage.html------------------------*/
+
+/*---------------------------playerstats.html------------------------*/
+#titlestats{
+    margin: 3vh;
+    text-align:center;
+    font-size: 8vh;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.35vh ;
+    -webkit-text-stroke-color: black;
+}
+
+#chart{
+    display: flex;
+    margin: 0 auto;
+    width: 30vw;
+    height: 25vw;
+}
+
+#return{
+    width: 15vh;
+    height: 8vh;
+    font-size: 2.5vh;
+    border-color: Black;
+    border-width: 0.5vh;
+}
+
+#autosavemessage{
+    margin: 3%;
+    text-align:center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    -webkit-text-stroke-width: 0.15rem ;
+    -webkit-text-stroke-color: black;
+}
+
+.Row {
+    display: table;
+    width: 70%; /*Optional*/
+    margin-left: 15%;
+    margin-right: 15%;
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+
+.Column {
+    display: table-cell;
+    text-align: center;
+
+}
+
+#highest, #lowest, #avg{
+
+    text-align: center;
+    padding-bottom: 2vh;
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.25vh ;
+    -webkit-text-stroke-color: black;
+}
+
+#highest{
+    color: lightgreen;
+}
+
+#lowest{
+    color: #dc5349;
+}
+
+#avg{
+    color: lightgrey;
+}
+
