@@ -12,10 +12,10 @@ The application contains various features:
 
 ### Screenshots 
 ![Screenshot 0](Screenshots/Screenshot%20(1158).png)   
-![Screenshot 3](Screenshots/Screenshot%20(1162).png)  
+![Screenshot 3](Screenshots/Screenshot%20(1207).png)  
 ![Screenshot 4](Screenshots/Screenshot%20(1163).png)  
 ![Screenshot 5](Screenshots/Screenshot%20(1164).png)  
 ![Screenshot 6](Screenshots/Screenshot%20(1166).png)  
 ![Screenshot 7](Screenshots/Screenshot%20(1180).png)  
-![Screenshot 1](Screenshots/Screenshot%20(1159).png)  
+![Screenshot 1](Screenshots/Screenshot%20(1208).png)  
 ![Screenshot 2](Screenshots/Screenshot%20(1160).png) 
