@@ -5,10 +5,10 @@ Location Guesser is an educational geolocation guessing game created to test and
 ### Features
 The application contains various features:
 
-- Two game modes: Flags and Countries
-- Difficulty settings: Easy, Medium, and Hard
-- Infinite Round Mode: In this game mode, players compete in infinite rounds, continuing only if they answer correctly.
-- Player Statistics: Highest score, average score, and timeline of results
+- **Two game modes**: Flags and Countries
+- **Difficulty settings**: Easy, Medium, and Hard
+- **Infinite Round Mode**: In this game mode, players compete in infinite rounds, continuing only if they answer correctly.
+- **Player Statistics**: Highest score, average score, and timeline of results
 
 ### Screenshots 
 
