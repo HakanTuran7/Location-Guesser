@@ -1,23 +1,61 @@
 <!DOCTYPE html>
+
+<!--
+Page Name: endpage.html
+Purpose: Displays the player's final score and signals the end of the game after all rounds are complete.
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CS408 Project</title>
+    <title>Location Guesser</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
-    <link rel = "stylesheet" href = "location.css">
-    <script src = "location.js"></script>
+    <link rel="stylesheet" href="location.css">
+
+    <!-- JavaScript -->
+    <script src="location.js"></script>
+
 </head>
-<body onload = "finalplayerscore(); checkifinfinite(); hidesavebutton()" >
-<div class = "container">
-    <div class = "title"> <h2> Game Over </h2> </div>
-    <div class = "title"> <h3 id = subtitle> All Rounds Complete. </h3> </div>
-    <div class = "title"> <h3 id = playerscore> Your Final Score:</h3> </div>
-    <div> <h3 id = autosavemessage> Score has been automatically saved to player stats </h3> </div>
-    <div class = "button"> <button type="button" id = "Home" onclick = clickHomebutton();resetinfiniterounds(); class="btn btn-primary btn-lg"> Home </button> </div>
+<body onload="finalplayerscore(); checkifinfinite(); hidesavebutton()">
+
+<!-- Container -->
+<div class="container">
+
+    <!-- Title -->
+    <div class="title">
+        <h2>Game Over</h2>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="title">
+        <h3 id="subtitle">All Rounds Complete.</h3>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="title">
+        <h3 id="playerscore">Your Final Score:</h3>
+    </div>
+
+    <!-- AutoSave Message -->
+    <div>
+        <h3 id="autosavemessage">Score has been saved to the Player Progress Graph</h3>
+    </div>
+
+    <!-- Home Button -->
+    <div class="button">
+        <button type="button" id="Home" onclick="clickHomebutton();resetinfiniterounds();" class="btn btn-primary btn-lg">Home</button>
+    </div>
 
 </div>
+
 </body>
 </html>
+
+
+
+
 
 

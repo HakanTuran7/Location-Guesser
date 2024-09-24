@@ -1,79 +1,108 @@
+/*
+
+Name: location.js
+Purpose: Contains all JavaScript functions utilised within the application.
+         (Script related to the Player progress chart is contained within the player stats HTML pages).
+
+*/
+
 'use strict';
 
-// Creates ink between index.html and gamemode.html.
-function clickplaybutton(){
+// Create a link between index.html and gamemode.html.
+function clickplaybutton() {
     location.href = 'gamemode.html';
 }
 
-// Creates link between gamemode.html and difficulty.html
-function clickgamemodebutton(){
+// Create a link between gamemode.html and difficulty.html
+function clickgamemodebutton() {
     location.href = 'difficulty.html';
 }
 
-// Creates link between playerstats.html and index.html
-function clickreturn(){
+// Create a link between playerstats.html and index.html
+function clickreturn() {
     location.href = 'index.html';
 }
 
-// Creates link between index.html and playerstats.html
-function clickstats(){
-    location.href = 'playerstats.html';
+// Create a link between index.html and playerstat.html
+function clickstats() {
+    location.href = 'playerstat.html';
 }
 
-// Sets selected gamemode 'flag' item to True
-function selectedflags(){
-    sessionStorage.setItem("gamemode","True");
+// Set gamemode item to 'True' when 'flags' is selected
+function selectedflags() {
+    sessionStorage.setItem("gamemode", "True");
 }
 
-// Sets selected gamemode 'countries' item to True
-function selectedcountries(){
-    sessionStorage.setItem("gamemode","False");
+// Set gamemode item to 'False' when 'countries' is selected
+function selectedcountries() {
+    sessionStorage.setItem("gamemode", "False");
 }
 
-// Creates link between difficulty.html and rounds.html
-function clickedifficultybutton(){
+// Create a link between difficulty.html and rounds.html
+function clickedifficultybutton() {
     location.href = 'rounds.html';
 }
 
-// Creates link between endpage.html and index.html
-function clickHomebutton(){
+// Create a link between endpage.html and index.html
+function clickHomebutton() {
     location.href = 'index.html';
 }
 
-// Sets 'infinite' item to True when infinite rounds is selected
-function selectedinfiniterounds(){
-    sessionStorage.setItem("infinite","True");
+// Set 'infinite' item to 'True' when infinite rounds is selected
+function selectedinfiniterounds() {
+    sessionStorage.setItem("infinite", "True");
 }
 
-// Creates link between rounds.html and imageshown.html
-function clickroundbutton(){
+// Create a link between rounds.html and imageshown.html
+function clickroundbutton() {
     location.href = 'imageshown.html';
 }
 
-// Creates link between imageshown.html and game.html
-function clickcontinuebutton(){
+// Create a link between imageshown.html and game.html
+function clickcontinuebutton() {
     location.href = 'game.html';
 }
 
-// Closes current tab - doesnt work
-function closetab(){
-    window.close();
+// Create a link between playerstatscountries.html and playerstatsflags.html to playerstat.html
+function mainstatreturn() {
+    location.href = 'playerstat.html';
 }
 
-// Sets 'chosendifficulty' storage item to difficulty selected by user
-function easydifficulty(){
-    sessionStorage.setItem("chosendifficulty","easy");
-}
-function mediumdifficulty(){
-    sessionStorage.setItem("chosendifficulty","medium");
-}
-function harddifficulty(){
-    sessionStorage.setItem("chosendifficulty","hard");
+// Create a link between playerstat.html and playerstatscountries.html
+function tocountrystats() {
+    location.href = 'playerstatscountries.html';
 }
 
+// Create a link between playerstat.html and playerstatsflags.html
+function toflagstats() {
+    location.href = 'playerstatsflags.html';
+}
 
-// Array of countries from Interactive map
-const countries = ['Afghanistan','Angola','Albania','United Arab Emirates','Argentina','Armenia','Australia','Austria','Azerbaijan','Burundi','Belgium','Benin','Burkina Faso','Bangladesh','Bulgaria','Bosnia and Herzegovina','Belarus','Belize','Bolivia','Brazil','Brunei Darussalam','Bhutan','Botswana','Central African Republic','Canada','Switzerland','China',"Côte d'Ivoire",'Cameroon','Democratic Republic of the Congo','Republic of Congo','Colombia','Costa Rica','Cuba','Czech Republic','Germany','Djibouti','Denmark','Dominican Republic','Algeria','Ecuador','Egypt','Eritrea','Estonia','Ethiopia','Finland','Gabon','United Kingdom','Georgia','Ghana','Guinea','The Gambia','Guinea-Bissau','Equatorial Guinea','Greece','Greenland','Guatemala','Guyana','Honduras','Croatia','Haiti','Hungary','Indonesia','India','Ireland','Iran','Iraq','Iceland','Israel','Italy','Jamaica','Jordan','Japan','Kazakhstan','Kenya','Kyrgyzstan','Cambodia','South Korea','Kuwait','Lao PDR','Lebanon','Liberia','Libya','Sri Lanka','Lesotho','Lithuania','Luxembourg','Latvia','Morocco','Moldova','Madagascar','Mexico','Macedonia','Mali','Myanmar','Montenegro','Mongolia','Mozambique','Mauritania','Malawi','Malaysia','Namibia','Niger','Nigeria','Nicaragua','Norway','Nepal','Oman','Pakistan','Panama','Peru','Philippines','Papua New Guinea','Poland','North Korea','Paraguay','Palestine','Qatar','Romania','Rwanda','Western Sahara','Saudi Arabia','Sudan','South Sudan','Senegal','Sierra Leone','El Salvador','Serbia','Suriname','Slovakia','Slovenia','Sweden','Swaziland','Syria','Chad','Togo','Thailand','Tajikistan','Turkmenistan','Timor-Leste','Tunisia','Turkey','Taiwan','Tanzania','Uganda','Ukraine','Uruguay','Uzbekistan','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe','Somalia','Kosovo','South Africa','New Zealand','Chile','Netherlands','Portugal','Russia','Spain','France','United States','French Guiana','Aruba','Anguilla','American Samoa','Antigua and Barbuda','Bahrain','Bahamas','Saint-Barthélemy','Bermuda','Barbados','Comoros','Cape Verde','Curaçao','Cayman Islands','Cyprus','Dominica','Falkland Islands','Faeroe Islands','Federated States of Micronesia','Grenada','Guam','Saint Kitts and Nevis','Saint Lucia','Saint-Martin','Maldives','Marshall Islands','Malta','Northern Mariana Islands','Montserrat','Mauritius','New Caledonia','Nauru','Palau','Puerto Rico','French Polynesia','Solomon Islands','São Tomé and Principe','Sint Maarten','Seychelles','Turks and Caicos Islands','Tonga','Trinidad and Tobago','Tuvalu','Saint Vincent and the Grenadines','British Virgin Islands','United States Virgin Islands','Vanuatu','Samoa','Netherlands','St. Eustatius (Netherlands)','Saba (Netherlands)','Martinique','Canary Islands (Spain)','Mayotte','Reunion','Guadeloupe','Fiji'];
+// Set 'chosendifficulty' storage item to 'easy' difficulty selected.
+function easydifficulty() {
+    sessionStorage.setItem("chosendifficulty", "easy");
+}
+
+// Set 'chosendifficulty' storage item to 'medium' difficulty selected.
+function mediumdifficulty() {
+    sessionStorage.setItem("chosendifficulty", "medium");
+}
+
+// Set 'chosendifficulty' storage item to 'hard' difficulty selected.
+function harddifficulty() {
+    sessionStorage.setItem("chosendifficulty", "hard");
+}
+
+// Set the round number item to '1' if null
+function setround() {
+    if (localStorage.getItem("round") === null) {
+        let round = 1;
+        localStorage.round = JSON.stringify(round);
+    }
+}
+
+// Array of countries from Interactive map. Created from retreving all ids in the SVG data
+const countries = ['Afghanistan','Angola','Albania','United Arab Emirates','Argentina','Armenia','Australia','Austria','Azerbaijan','Burundi','Belgium','Benin','Burkina Faso','Bangladesh','Bulgaria','Bosnia and Herzegovina','Belarus','Belize','Bolivia','Brazil','Brunei Darussalam','Bhutan','Botswana','Central African Republic','Canada','Switzerland','China',"Côte D'Ivoire",'Cameroon','Democratic Republic of the Congo','Republic of Congo','Colombia','Costa Rica','Cuba','Czech Republic','Germany','Djibouti','Denmark','Dominican Republic','Algeria','Ecuador','Egypt','Eritrea','Estonia','Ethiopia','Finland','Gabon','United Kingdom','Georgia','Ghana','Guinea','The Gambia','Guinea-Bissau','Equatorial Guinea','Greece','Greenland','Guatemala','Guyana','Honduras','Croatia','Haiti','Hungary','Indonesia','India','Ireland','Iran','Iraq','Iceland','Israel','Italy','Jamaica','Jordan','Japan','Kazakhstan','Kenya','Kyrgyzstan','Cambodia','South Korea','Kuwait','Lao PDR','Lebanon','Liberia','Libya','Sri Lanka','Lesotho','Lithuania','Luxembourg','Latvia','Morocco','Moldova','Madagascar','Mexico','Macedonia','Mali','Myanmar','Montenegro','Mongolia','Mozambique','Mauritania','Malawi','Malaysia','Namibia','Niger','Nigeria','Nicaragua','Norway','Nepal','Oman','Pakistan','Panama','Peru','Philippines','Papua New Guinea','Poland','North Korea','Paraguay','Palestine','Qatar','Romania','Rwanda','Western Sahara','Saudi Arabia','Sudan','South Sudan','Senegal','Sierra Leone','El Salvador','Serbia','Suriname','Slovakia','Slovenia','Sweden','Swaziland','Syria','Chad','Togo','Thailand','Tajikistan','Turkmenistan','Timor-Leste','Tunisia','Turkey','Taiwan','Tanzania','Uganda','Ukraine','Uruguay','Uzbekistan','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe','Somalia','Kosovo','South Africa','New Zealand','Chile','Netherlands','Portugal','Russia','Spain','France','United States','French Guiana','Aruba','Anguilla','American Samoa','Antigua and Barbuda','Bahrain','Bahamas','Saint-Barthélemy','Bermuda','Barbados','Comoros','Cape Verde','Curaçao','Cayman Islands','Cyprus','Dominica','Falkland Islands','Faeroe Islands','Federated States of Micronesia','Grenada','Guam','Saint Kitts and Nevis','Saint Lucia','Saint-Martin','Maldives','Marshall Islands','Malta','Northern Mariana Islands','Montserrat','Mauritius','New Caledonia','Nauru','Palau','Puerto Rico','French Polynesia','Solomon Islands','São Tomé and Príncipe','Sint Maarten','Seychelles','Turks and Caicos Islands','Tonga','Trinidad and Tobago','Tuvalu','Saint Vincent and the Grenadines','British Virgin Islands','United States Virgin Islands','Vanuatu','Samoa','Netherlands','St. Eustatius (Netherlands)','Saba (Netherlands)','Martinique','Canary Islands (Spain)','Mayotte','Reunion','Guadeloupe','Fiji'];
 
 // Map of key and values with countries and country codes
 const flags = new Map();
@@ -110,16 +139,17 @@ flags.set("Belarus", "by");
 flags.set("Belize", "bz");
 flags.set("Canada", "ca");
 flags.set("Central African Republic", "cf");
-flags.set("Democratic Republic Of The Congo", "cd");
+flags.set("Democratic Republic of The Congo", "cd");
 flags.set("Republic of Congo", "cg");
 flags.set("Switzerland", "ch");
-flags.set("Cote D'Ivoire", "ci");
+flags.set("Côte D'Ivoire", "ci");
 flags.set("Chile", "cl");
 flags.set("Cameroon", "cm");
 flags.set("China", "cn");
 flags.set("Colombia", "co");
 flags.set("Costa Rica", "cr");
 flags.set("Cuba", "cu");
+flags.set("Curaçao", "cw");
 flags.set("Cape Verde", "cv");
 flags.set("Cyprus", "cy");
 flags.set("Czech Republic", "cz");
@@ -249,7 +279,7 @@ flags.set("Sierra Leone", "sl");
 flags.set("Senegal", "sn");
 flags.set("Somalia", "so");
 flags.set("Suriname", "sr");
-flags.set("São Tomé and Principe", "st");
+flags.set("São Tomé and Príncipe", "st");
 flags.set("El Salvador", "sv");
 flags.set("Syria", "sy");
 flags.set("Swaziland", "sz");
@@ -297,127 +327,136 @@ flags.set("St. Eustatius (Netherlands)", "bq");
 flags.set("Saba (Netherlands)", "bq");
 flags.set("Canary Islands (Spain)", "ic");
 
-// Searches and creates one country array
-function getonecountry(){
+// Create a 1 country array if '1' round is selected
+function getonecountry() {
     let selectedcountryarray = [];
     selectedcountryarray.push(countries[Math.floor(Math.random() * countries.length)]);
-    sessionStorage.setItem("selectedcountryarray",JSON.stringify(selectedcountryarray));
+    sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
 }
 
-// Searches and creates a three country array
-function getthreecountry(){
+// Create a 3 country array if '3' rounds is selected
+function getthreecountry() {
     let countriestemp = countries.slice();
     let selectedcountryarray = [];
 
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
         countriestemp.pop(selectedcountry);
         selectedcountryarray.push(selectedcountry);
     }
-    sessionStorage.setItem("selectedcountryarray",JSON.stringify(selectedcountryarray));
+    sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
 }
 
-// Searches and creates a five country array
-function getfiveecountry(){
+// Create a 5 country array if '5' rounds is selected
+function getfiveecountry() {
     let countriestemp = countries.slice();
     let selectedcountryarray = [];
 
-    for(let i = 0; i < 5; i++){
+    for (let i = 0; i < 5; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
         countriestemp.pop(selectedcountry);
         selectedcountryarray.push(selectedcountry);
     }
-    sessionStorage.setItem("selectedcountryarray",JSON.stringify(selectedcountryarray));
+    sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
 }
 
-
-// Resets 'infiniterounds' item when game resets
-function resetinfiniterounds(){
-    sessionStorage.setItem("infinite","False");
+// Reset 'infiniterounds' item when game is reset
+function resetinfiniterounds() {
+    sessionStorage.setItem("infinite", "False");
 }
 
-//Hides save button on endpage.html page
-function hidesavebutton(){
-    if (sessionStorage.getItem("infinite") === "True"){
+// Hide 'player progress chart' save message if not playing 'infinite' rounds mode
+function hidesavebutton() {
+    if (sessionStorage.getItem("infinite") === "True") {
         document.getElementById("autosavemessage").style.display = "block";
-    }else{
+    } else {
         document.getElementById("autosavemessage").style.display = "none";
     }
 }
 
-// Searches and creates array of 50 countries
-function getinfinitecountry(){
-    sessionStorage.setItem("infinite","True");
+// Create an 80 country array if 'infinite' rounds is selected
+function getinfinitecountry() {
+    sessionStorage.setItem("infinite", "True");
     let countriestemp = countries.slice();
     let selectedcountryarray = [];
 
-    for(let i = 0; i < 50; i++){
+    for (let i = 0; i < 80; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
         countriestemp.pop(selectedcountry);
         selectedcountryarray.push(selectedcountry);
     }
-    sessionStorage.setItem("selectedcountryarray",JSON.stringify(selectedcountryarray));
+    sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
 }
 
+/*
+  Select an API to utilise.
+  If 'flags' mode then get flags from 'https://flagpedia.net' by inserting the country code into the API URL
+  if 'countries' mode then call fetchimage()
+  Once obtained, set the image.src to the fetched image
 
-// Calls fetchimage() function when page loads
-// if flag mode then gets flags from 'https://flagpedia.net'
-window.addEventListener("DOMContentLoaded", async() => {
+  Unplash API: https://unsplash.com/developers
+  Flagpedia: https://flagpedia.net/download/api
+
+ */
+window.addEventListener("DOMContentLoaded", async () => {
     if (sessionStorage.getItem("gamemode") === "True") {
         let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
         selectedcountryarray = JSON.parse(selectedcountryarray);
         var countrycode = flags.get(selectedcountryarray[0]);
 
-        if (countrycode === undefined){
-        }
+        if (countrycode === undefined) {return}
 
-        const image = document.getElementById('y');
-        image.src = "https://flagcdn.com/w640/"+countrycode+".png";
+        const image = document.getElementById('APIimage');
+        if (image || image != null) { // Check if the image exists to stop error, as function continuously runs
+            image.src = "https://flagcdn.com/w640/" + countrycode + ".png";
+        }
     } else {
-        const image = document.getElementById('y');
-        //image.style.border  = "1vh solid white";
-        const button = document.getElementById('x');
-        image.src = await fetchimage();
+        const image = document.getElementById('APIimage');
+        if (image || image != null) { // Check if the image exists to stop error, as function continuously runs
+            image.src = await fetchimage();
+        }
     }
 });
 
-
-
-// Fetches image from Unsplash API or Flag API
-async function fetchimage(countryname){
-    let url = "";
-    let gamemodetype = sessionStorage.getItem("gamemode");
-    let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
-    selectedcountryarray = JSON.parse(selectedcountryarray);
-    let firstcountry = selectedcountryarray[0].replace(/ /g,"_");
-    url = 'https://api.unsplash.com/search/photos?query='+firstcountry+'&client_id=es03-4SsJY9EfXuRksaoVjjm8I85DGqU3rBXKe7EDYA';
-    let random = Math.floor(Math.random()*5);
-    return fetch(url)
-        .then ((res) => res.json())
-        .then((data) => {
-            let collectedimages = data.results[random];
-            return collectedimages.urls.regular;
-        })
-        .catch(err=>console.log(err));
+/*
+  Fetch the country image from the Unsplash API by inserting the country name into the API URL with the client id key.
+  A random array of images is created and a single image is returned.
+  Try Catch statement used for errors when fetching images
+ */
+async function fetchimage() {
+    try {
+        let url = "";
+        let gamemodetype = sessionStorage.getItem("gamemode");
+        let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
+        selectedcountryarray = JSON.parse(selectedcountryarray);
+        let firstcountry = selectedcountryarray[0].replace(/ /g, "_"); // replaces spaces in country names with underline
+        url = 'https://api.unsplash.com/search/photos?query=' + firstcountry + '&client_id=es03-4SsJY9EfXuRksaoVjjm8I85DGqU3rBXKe7EDYA';
+        let random = Math.floor(Math.random() * 5);
+        return fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+                let collectedimages = data.results[random];
+                return collectedimages.urls.regular;
+            })
+            .catch(err => console.log(err));
+    }
+    catch(e){
+    }
 }
 
-// Provides functionality to the interactive map on game.html.
-// Includes multiple event listeners for mouse hover, click etc.
-// Modifies the corresponding CSS from location.css
+/*
+  Provide functionality to the interactive map on game.html.
+  Include multiple event listeners for mouse actions; hover, click etc.
+  Modify the corresponding CSS from location.css by using the country event ids
+ */
 function map() {
     document.querySelectorAll('.allPaths').forEach(event => {
         event.addEventListener("mouseover", function () {
-            window.onmousemove = function (p) {
-                let x = p.clientX;
-                let y = p.clientY;
-                document.getElementById('name').style.top = y - 20 + "px";
-                document.getElementById("name").style.top = x - 20 + "px";
-            }
-            if(event.id === sessionStorage.getItem("clicked")){
+
+            if (event.id === sessionStorage.getItem("clicked")) {
                 document.getElementById('countryname2').innerText = event.id;
                 document.getElementById('countryname').style.opacity = 1;
-            }
-            else {
+            } else {
                 event.style.fill = "green";
                 document.getElementById('countryname2').innerText = event.id;
                 document.getElementById('countryname').style.opacity = 1;
@@ -425,27 +464,23 @@ function map() {
         })
         event.addEventListener("mouseleave", function () {
 
-            if(event.id === sessionStorage.getItem("clicked")){
+            if (event.id === sessionStorage.getItem("clicked")) {
                 document.getElementById('countryname').style.opacity = 0;
-            }
-            else {
+            } else {
                 event.style.fill = "#ececec";
                 document.getElementById('countryname').style.opacity = 0;
             }
         })
         event.addEventListener("click", function () {
 
-
             let clicked = (sessionStorage.getItem("clicked"));
-            if (clicked === ''){
-
-            }else {
+            if (clicked === '') {} else {
 
                 // adding \ to spaces in clicked
-                let rawr =  clicked.replace(/\s/g,'\\ ');
+                let spaceout = clicked.replace(/\s/g, '\\ ');
 
-                let array = document.querySelectorAll("[id= " + rawr +"]" );
-                for (let i=0; i<array.length; i++) {
+                let array = document.querySelectorAll("[id= " + spaceout + "]");
+                for (let i = 0; i < array.length; i++) {
                     array[i].setAttribute('style', 'background-color:#ececec;');
                 }
             }
@@ -454,40 +489,46 @@ function map() {
             event.style.fill = "#00008B";
             sessionStorage.setItem("individualguess", event.id);
             sessionStorage.setItem("clicked", event.id);
-
         })
-
     })
 }
 
-// Resets clicked variable after each round
-function resetclickedvariable(){
-    sessionStorage.setItem("clicked",'');
+// Reset the clicked country variable after each round
+function resetclickedvariable() {
+    sessionStorage.setItem("clicked", '');
 }
 
-// Resets player guess after each round
-function resetplayerguess(){
-    sessionStorage.setItem("individualguess",'');
+// Reset the player guess item after each round
+function resetplayerguess() {
+    sessionStorage.setItem("individualguess", '');
 }
 
-// Updates round number after each round
-function updateRound(){
-    let round = sessionStorage.getItem("round");
+// Update the round number item after each round
+function updateRound() {
+    let round = localStorage.getItem("round");
     round = JSON.parse(round);
     round++;
-    sessionStorage.setItem("round",JSON.stringify(round));
-    document.getElementById("roundno").innerText = "Round " + round;
+    localStorage.setItem("round", JSON.stringify(round));
 }
 
-// Resets round number to 0
-function resetround(){
-    let round = sessionStorage.getItem("round");
-    sessionStorage.setItem("round",JSON.stringify(0));
-    document.getElementById("roundno").innerText = "Round " + round;
+// Display the updated round number item after each round by modifying the element 'roundno' innertext
+function showround() {
+    document.getElementById("roundno").innerText = "Round " + localStorage.getItem("round");
 }
 
-// Checks player answer and re-directs to corresponding page.
-function correctorincorrect(){
+// Reset the round number item to 1 after each game
+function resetround() {
+    let round = localStorage.getItem("round");
+    localStorage.setItem("round", JSON.stringify(1));
+}
+
+/*
+  Check player's answer and display text / icon based on if answer is correct or incorrect.
+  - Correct = green tick
+  - Incorrect or run out of time = red cross
+  Completed by modifying the 'tickorcross' element src
+ */
+function correctorincorrect() {
     let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
     selectedcountryarray = JSON.parse(selectedcountryarray);
 
@@ -496,46 +537,40 @@ function correctorincorrect(){
     let playerscore = sessionStorage.getItem("playerscore");
     playerscore = JSON.parse(playerscore);
 
-    document.getElementById("playerGuess").innerText = "Your Guess: " + individualguess ;
+    document.getElementById("playerGuess").innerText = "Your Guess: " + individualguess;
     document.getElementById("answer").innerText = "Answer: " + selectedcountryarray[0];
 
-
-
-    if(sessionStorage.getItem("outoftime") === "true"){
-        document.getElementById('tickorcross').src = "cross.webp";
+    if (sessionStorage.getItem("outoftime") === "true") {
+        document.getElementById('tickorcross').src = "cross.png";
         document.getElementById('correctorincorrecttext').innerText = " Out of Time!";
         document.getElementById("playerGuess").style.visibility = 'hidden';
         sessionStorage.setItem("outoftime", "False");
-    }
-    else if (individualguess === selectedcountryarray[0]){
+    } else if (individualguess === selectedcountryarray[0]) {
+        totalcorrectcounter();
         document.getElementById('tickorcross').src = "tick.png";
         document.getElementById('correctorincorrecttext').innerText = "You are Correct!";
         document.getElementById("playerGuess").style.color = 'green';
         playerscore++;
-        sessionStorage.setItem("playerscore",JSON.stringify(playerscore));
-    }
-    else {
-        document.getElementById('tickorcross').src = "cross.webp";
+        sessionStorage.setItem("playerscore", JSON.stringify(playerscore));
+    } else {
+        document.getElementById('tickorcross').src = "cross.png";
         document.getElementById('correctorincorrecttext').innerText = "You are Incorrect!";
         document.getElementById("playerGuess").style.color = 'red';
     }
 
     selectedcountryarray.shift();
 
-    sessionStorage.setItem("selectedcountryarray",JSON.stringify(selectedcountryarray));
+    sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
 }
 
-
-// Directs player to next round.html or endoage.html
-function nextroundorexit(){
+// Direct the player to round.html (Next Round) or endpage.html (Endpage) based on number of countries left to guess
+function nextroundorexit() {
     let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
     selectedcountryarray = JSON.parse(selectedcountryarray);
 
-
-    if (sessionStorage.getItem("infinite") === "True" && document.getElementById("correctorincorrecttext").innerText === "You are Incorrect!" ){
+    if (sessionStorage.getItem("infinite") === "True" && document.getElementById("correctorincorrecttext").innerText === "You are Incorrect!") {
         location.href = 'endpage.html';
-    }
-    else {
+    } else {
 
         if (selectedcountryarray.length === 0) {
             location.href = 'endpage.html';
@@ -545,68 +580,72 @@ function nextroundorexit(){
     }
 }
 
-
-
-// Instantiates and resets player score
-function instanteplayerscore(){
+// Instantiate and reset the player score item
+function instanteplayerscore() {
     let playerscore = 0;
-    sessionStorage.setItem("playerscore",JSON.stringify(playerscore));
-
+    sessionStorage.setItem("playerscore", JSON.stringify(playerscore));
 }
 
-
-// Displays player's final score
-function finalplayerscore(){
+// Display the player's final score
+function finalplayerscore() {
     let playerscore = sessionStorage.getItem("playerscore");
     playerscore = JSON.parse(playerscore);
     document.getElementById('playerscore').innerText = 'Final Score: ' + playerscore;
 }
 
-// set session variable for diffculty, onload of each round check diffculty then call one of three functions
-// ones below will have time and other function will check variable
-// Allocates player guessing time depending on difficulty selected.
-function checkdifficulty(){
+/*
+ Check session variable for diffculty, onload of each round check diffculty again.
+ Allocate player guessing time depending on difficulty selected by player.
+ Time in (ms)
+ */
+function checkdifficulty() {
     let chosendifficulty = sessionStorage.getItem("chosendifficulty");
-    if (chosendifficulty === "easy"){
+    if (chosendifficulty === "easy") {
         window.setTimeout(outoftime, 60000);
-    }
-    else if (chosendifficulty === "medium"){
+    } else if (chosendifficulty === "medium") {
         window.setTimeout(outoftime, 30000);
-    }
-    else{
+    } else {
         window.setTimeout(outoftime, 10000);
     }
 }
 
-// Sends window alert if user has no selected answer
+// Create a link between 'game.html' and 'correctorincorrect.html'
 function answer() {
     location.href = 'correctorincorrect.html';
 }
 
-// Calls asnwer() function when player runs out of time
-function outoftime(){
-    sessionStorage.setItem("outoftime","true");
+/*
+  Call answer() function when player runs out of time
+  Sets 'outoftime' item to 'true'
+ */
+function outoftime() {
+    sessionStorage.setItem("outoftime", "true");
     answer();
 }
 
-// Clears previously defined timeout
-function cleartimeout(){
+// Clear previously defined timeout
+function cleartimeout() {
     window.clearTimeout();
 }
 
-// Starts and progresses timebar shown on game.html
+/*
+   Start and update timebar shown on game.html
+   Interval based on players selected difficulty
+   Clear time interval after bar reaches 100%
+   Interval time in (ms)
+
+   Time bar code based on https://www.w3schools.com/howto/howto_js_progressbar.asp (w3 schools progress bar)
+ */
 function starttimebar() {
     let x = 0;
     let interval = 0;
     let chosendifficulty = sessionStorage.getItem("chosendifficulty");
 
-    if (chosendifficulty === "easy"){
+    if (chosendifficulty === "easy") {
         interval = 600;
-    }
-    else if (chosendifficulty === "medium"){
+    } else if (chosendifficulty === "medium") {
         interval = 300;
-    }
-    else{
+    } else {
         interval = 100;
     }
 
@@ -628,94 +667,289 @@ function starttimebar() {
     }
 }
 
-// check if localstorage items are set
-function playerinstantiate(){
-    if (localStorage.getItem("player_scores") === null) {
-        let player_scores = [];
-        localStorage.player_scores = JSON.stringify(player_scores);
+/*
+  Check if localstorage items are set and initialsie them if null
+  Function performed at the start of the game on index.html to ensure all items are set before playing
+ */
+function playerinstantiate() {
+
+    if (localStorage.getItem("infiniteroundnumberflags") === null) {
+        let roundnumber = 0;
+        localStorage.infiniteroundnumberflags = JSON.stringify(roundnumber);
     }
 
-    if (localStorage.getItem("roundnumberarray") === null) {
+    if (localStorage.getItem("infiniteroundnumbercountries") === null) {
+        let roundnumber = 0;
+        localStorage.infiniteroundnumbercountries = JSON.stringify(roundnumber);
+    }
+
+    if (localStorage.getItem("playerscoresflags") === null) {
+        let player_scores = [];
+        localStorage.playerscoresflags = JSON.stringify(player_scores);
+    }
+
+    if (localStorage.getItem("roundnumberarrayflags") === null) {
         let roundnumberarray = [];
-        localStorage.roundnumberarray = JSON.stringify(roundnumberarray);
+        localStorage.roundnumberarrayflags = JSON.stringify(roundnumberarray);
+    }
+
+    if (localStorage.getItem("playerscorescountries") === null) {
+        let player_scores = [];
+        localStorage.playerscorescountries = JSON.stringify(player_scores);
+    }
+
+    if (localStorage.getItem("roundnumberarraycountries") === null) {
+        let roundnumberarray = [];
+        localStorage.roundnumberarraycountries = JSON.stringify(roundnumberarray);
     }
 
     if (localStorage.getItem("roundnumber") === null) {
         let roundnumber = 0;
         localStorage.roundnumber = JSON.stringify(roundnumber);
     }
+
+    if (localStorage.getItem("flagtimings") === null) {
+        let flagtimings = [];
+        localStorage.flagtimings = JSON.stringify(flagtimings);
+    }
+
+    if (localStorage.getItem("countriestimings") === null) {
+        let countriestimings = [];
+        localStorage.countriestimings = JSON.stringify(countriestimings);
+    }
+
+    if (localStorage.getItem("totalroundscountry") === null) {
+        let player_scores = 0;
+        localStorage.totalroundscountry = JSON.stringify(player_scores);
+    }
+
+    if (localStorage.getItem("totalcorrectcountry") === null) {
+        let player_scores = 0;
+        localStorage.totalcorrectcountry = JSON.stringify(player_scores);
+    }
+
+    if (localStorage.getItem("totalroundsflags") === null) {
+        let player_scores = 0;
+        localStorage.totalroundsflags = JSON.stringify(player_scores);
+    }
+
+    if (localStorage.getItem("totalcorrectflags") === null) {
+        let player_scores = 0;
+        localStorage.totalcorrectflags = JSON.stringify(player_scores);
+    }
 }
 
-
-// checks if the 'infinite' storage item is True
-function checkifinfinite(){
-    if(sessionStorage.getItem("infinite") === "True"){
-        autosavescore();
-    }
-    else{
-    }
+/*
+  Check if 'infinite' round item is true
+  Check gamemode and save score to player progress array
+  If 'flags' then call autosavescoreflags();
+  If 'Countries' then call autosavescorecountries();
+ */
+function checkifinfinite() {
+    if (sessionStorage.getItem("infinite") === "True") {
+        if (sessionStorage.getItem("gamemode") === "True") {
+            autosavescoreflags();
+        } else {
+            autosavescorecountries();
+        }
+    } else {}
 }
 
-// Saves user's score to localstorage array
-function autosavescore() {
-
+/*
+  Save player's current 'infinite' score to inifite flags score array
+  Check if storage is defined/supported
+  If so, get local storage array item, add score and set local storage array item again
+  Else alert player that local storage is not supported on browser
+ */
+function autosavescoreflags() {
 
     // check if supported in browser
     if (typeof (Storage) !== "undefined") {
         let playerscore = sessionStorage.getItem("playerscore");
 
-        let player_scores2 = JSON.parse(localStorage.getItem("player_scores"));
+        let player_scores2 = JSON.parse(localStorage.getItem("playerscoresflags"));
         player_scores2.push(playerscore);
-        localStorage.setItem("player_scores", JSON.stringify(player_scores2));
+        localStorage.setItem("playerscoresflags", JSON.stringify(player_scores2));
 
-
-        let roundnumberarray2 = JSON.parse(localStorage.getItem("roundnumberarray"));
-        let roundnumber2 = JSON.parse(localStorage.getItem("infiniteroundnumber"));
+        let roundnumberarray2 = JSON.parse(localStorage.getItem("roundnumberarrayflags"));
+        let roundnumber2 = JSON.parse(localStorage.getItem("infiniteroundnumberflags"));
 
         roundnumber2++;
         roundnumberarray2.push(roundnumber2);
 
-        localStorage.setItem("roundnumberarray", JSON.stringify(roundnumberarray2));
-        localStorage.setItem("infiniteroundnumber", JSON.stringify(roundnumber2));
-
-
+        localStorage.setItem("roundnumberarrayflags", JSON.stringify(roundnumberarray2));
+        localStorage.setItem("infiniteroundnumberflags", JSON.stringify(roundnumber2));
 
     } else {
-        alert("Sorry, your browser does not support Web Storage");
+        alert("Web Storage is not supported on this browser.");
     }
-
-    //  let username = prompt("Please enter a name:", "e.g. CoolDudeSurfer30")
-    //  localStorage.setItem("username", JSON.stringify(username));
-
 }
 
-// print array of ids in queryselect.
-function printid(){
+/*
+  Save player's current 'infinite' score to inifite countries score array
+  Check if storage is defined/supported
+  If so, get local storage array item, add score and set local storage array item again
+  Else alert player that local storage is not supported on browser
+ */
+function autosavescorecountries() {
 
+    // check if supported in browser
+    if (typeof (Storage) !== "undefined") {
+        let playerscore = sessionStorage.getItem("playerscore");
 
-    let countryarray = [];
+        let player_scores2 = JSON.parse(localStorage.getItem("playerscorescountries"));
+        player_scores2.push(playerscore);
+        localStorage.setItem("playerscorescountries", JSON.stringify(player_scores2));
 
-    let ids = document.querySelectorAll('[id]');
+        let roundnumberarray2 = JSON.parse(localStorage.getItem("roundnumberarraycountries"));
+        let roundnumber2 = JSON.parse(localStorage.getItem("infiniteroundnumbercountries"));
 
-    Array.prototype.forEach.call(ids, function (el, i) {
-        // "el" is your element
-        countryarray.push(el.id);
-    });
+        roundnumber2++;
+        roundnumberarray2.push(roundnumber2);
+
+        localStorage.setItem("roundnumberarraycountries", JSON.stringify(roundnumberarray2));
+        localStorage.setItem("infiniteroundnumbercountries", JSON.stringify(roundnumber2));
+
+    } else {
+        alert("Web Storage is not supported on this browser.");
+    }
 }
 
-// sets player stats when page loaded
-function setstats(){
-    let playerscoresoverall =  JSON.parse(localStorage.getItem("player_scores"));
-    let highest =  Math.max.apply(Math, playerscoresoverall);
-    let lowest =  Math.min.apply(Math, playerscoresoverall);
-    let sum = 0
+// Average player guess time variables
+let start;
+let end;
+let guesstime;
+
+// Start the timer during the country select stage i.e. 'game.html'
+function startimer() {
+    start = new Date();
+}
+
+/*
+  Timer function for average guessing time.
+  Ends the timer after the country select stage
+  Checks for the type of game mode. 'True' = flags, 'False' = countries
+  If 'flags' then add time to 'flagtimings' storage item
+  If 'countries' then add time to 'countriestimings' storage item
+ */
+function endtimer() {
+    end = new Date();
+    guesstime = Math.round((end - start) / 1000);
+
+    // if flags then add to flag time
+    if (sessionStorage.getItem("gamemode") === "True") {
+        let currentarray = JSON.parse(localStorage.getItem("flagtimings"));
+        currentarray.push(guesstime);
+        localStorage.setItem("flagtimings", JSON.stringify(currentarray));
+    } else {
+        let currentarray = JSON.parse(localStorage.getItem("countriestimings"));
+        currentarray.push(guesstime);
+        localStorage.setItem("countriestimings", JSON.stringify(currentarray));
+    }
+}
+
+/*
+  Set the player stats for countries
+  Each HTML box contains a differnt stat from the local storage
+  Each HTML box selected by id and modified using '.innertext'
+  For the infinite scores, 'Math' is utilised to perform basic mathematical functions to the countries infinite score array
+ */
+function setstatscountry() {
+    let avgtimecountries = JSON.parse(localStorage.getItem("countriestimings"));
+    let sumcountries = 0;
+    for (let i = 0; i < avgtimecountries.length; i++) {
+        sumcountries += parseInt(avgtimecountries[i]);
+    }
+    let avgcountries = Math.round(sumcountries / avgtimecountries.length * 10) / 10;
+    document.getElementById("avgtimecountries").innerText = String.fromCodePoint(0x1F554) + "\nAverage Guess Time:\n" + avgcountries + "s";
+
+    let totalroundscountries = JSON.parse(localStorage.getItem("totalroundscountries"));
+    document.getElementById("totalroundscountries").innerText = String.fromCodePoint(0x1F60E) + "\n\nTotal Rounds: \n" + totalroundscountries;
+
+    let totalcorrectcountries = JSON.parse(localStorage.getItem("totalcorrectcountries"));
+    document.getElementById("totalcorrectcountries").innerText = String.fromCodePoint(0x2705) + "\n\nTotal Correct (%): \n" +   Math.round((totalcorrectcountries / totalroundscountries) * 100);
+
+    let playerscoresoverall = JSON.parse(localStorage.getItem("playerscorescountries"));
+    let highest = Math.max.apply(Math, playerscoresoverall);
+    let lowest = Math.min.apply(Math, playerscoresoverall);
+    let sum = 0;
 
     for (let i = 0; i < playerscoresoverall.length; i++) {
         sum += parseInt(playerscoresoverall[i]);
     }
 
     let avg = Math.round(sum / playerscoresoverall.length * 10) / 10;
-    document.getElementById("highest").innerText = "•Highest Score: " + highest;
-    document.getElementById("lowest").innerText = "•Lowest Score: " + lowest;
-    document.getElementById("avg").innerText = "•Avg Score: " + avg;
+    document.getElementById("highestcountries").innerText = "Highest Score: \n" + highest;
+    document.getElementById("lowestcountries").innerText = "Lowest Score: \n" + lowest;
+    document.getElementById("avgcountries").innerText = "Avg Score: \n" + avg;
+}
+
+/*
+  Set the player stats for flags
+  Each HTML box contains a differnt stat from the local storage
+  Each HTML box selected by id and modified using '.innertext'
+  For the infinite scores, 'Math' is utilised to perform basic mathematical functions to the flags infinite score array
+ */
+function setstatsflag() {
+    let avgtimeflags = JSON.parse(localStorage.getItem("flagtimings"));
+    let sumflags = 0;
+    for (let i = 0; i < avgtimeflags.length; i++) {
+        sumflags += parseInt(avgtimeflags[i]);
+    }
+    let avgflags = Math.round(sumflags / avgtimeflags.length * 10) / 10;
+    document.getElementById("avgtimeflags").innerText = String.fromCodePoint(0x1F554) + "\nAverage Guess Time:\n" + avgflags + "s";
+
+    let totalroundsflags = JSON.parse(localStorage.getItem("totalroundsflags"));
+    document.getElementById("totalroundsflags").innerText = String.fromCodePoint(0x1F60E) + "\n\nTotal Rounds: \n" + totalroundsflags;
+
+    let totalcorrectflags = JSON.parse(localStorage.getItem("totalcorrectflags"));
+    document.getElementById("totalcorrectflags").innerText = String.fromCodePoint(0x2705) + "\n\nTotal Correct (%): \n" + Math.round((totalcorrectflags / totalroundsflags) * 100);
+
+    let playerscoresoverall = JSON.parse(localStorage.getItem("playerscoresflags"));
+    let highest = Math.max.apply(Math, playerscoresoverall);
+    let lowest = Math.min.apply(Math, playerscoresoverall);
+    let sum = 0;
+    for (let i = 0; i < playerscoresoverall.length; i++) {
+        sum += parseInt(playerscoresoverall[i]);
+    }
+    let avg = Math.round(sum / playerscoresoverall.length * 10) / 10;
+    document.getElementById("highestflags").innerText = "Highest Score: \n" + highest;
+    document.getElementById("lowestflags").innerText = "Lowest Score: \n" + lowest;
+    document.getElementById("avgflags").innerText = "Avg Score: \n" + avg;
+}
+
+/*
+  Check gamemode and update total rounds played
+  Checks for the type of game mode. 'True' = flags, 'False' = countries
+  If 'flags' then add time to 'totalroundsflags' storage item
+  If 'countries' then add time to 'totalroundscountries' storage item
+ */
+function totalroundcounter() {
+    if (sessionStorage.getItem("gamemode") === "True") {
+        let totalrounds = JSON.parse(localStorage.getItem("totalroundsflags"));
+        totalrounds++;
+        localStorage.setItem("totalroundsflags", JSON.stringify(totalrounds));
+    } else {
+        let totalrounds = JSON.parse(localStorage.getItem("totalroundscountries"));
+        totalrounds++;
+        localStorage.setItem("totalroundscountries", JSON.stringify(totalrounds));
+    }
+}
+
+/*
+Check gamemode and update total correct rounds
+Checks for the type of game mode. 'True' = flags, 'False' = countries
+If 'flags' then add time to 'totalcorrectflags' storage item
+If 'countries' then add time to 'totalcorrectcountries' storage item
+*/
+function totalcorrectcounter() {
+    if (sessionStorage.getItem("gamemode") === "True") {
+        let totalcorrect = JSON.parse(localStorage.getItem("totalcorrectflags"));
+        totalcorrect++;
+        localStorage.setItem("totalcorrectflags", JSON.stringify(totalcorrect));
+    } else {
+        let totalcorrect = JSON.parse(localStorage.getItem("totalcorrectcountries"));
+        totalcorrect++;
+        localStorage.setItem("totalcorrectcountries", JSON.stringify(totalcorrect));
+    }
 }

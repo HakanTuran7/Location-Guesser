@@ -1,38 +1,78 @@
 <!DOCTYPE html>
+
+<!--
+Page Name: gamemode.html
+Purpose: Provides the player the choice to play the 'Countries' or 'Flags' game mode.
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CS408 Project</title>
+    <title>Location Guesser</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
-    <link rel = "stylesheet" href = "location.css">
-    <script src = "location.js"></script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
+    <link rel="stylesheet" href="location.css">
+
+    <!-- JavaScript -->
+    <script src="location.js"></script>
+
 </head>
 <body>
-<div id = "container">
-    <div class = "title"> <h2> Game Mode </h2> </div>
-    <div id = "block_container">
-    <div id = "countries"> <button type="button" id = "countriesbutton" onclick = "clickgamemodebutton(); selectedcountries();" class="btn btn-primary btn-sm"> Countries </button> </div>
-    <div id = "flags"> <button type="button" id = "flagsbutton" onclick = "clickgamemodebutton(); selectedflags();" class="btn btn-primary btn-sm"> Flags </button> </div>
+
+<!-- Container -->
+<div id="container">
+
+    <!-- Title -->
+    <div class="title">
+        <h2>Game Mode</h2>
     </div>
+
+    <!-- Subtitle (Prompt) -->
+    <div class="subtitle">
+        <h2 id="tip2">Check out the info button &#128173;</h2>
+    </div>
+
+    <!-- Block Container -->
+    <div id="block_container">
+
+        <!-- Countries button -->
+        <div id="countries">
+            <button type="button" id="countriesbutton" onclick="clickgamemodebutton(); selectedcountries();" class="btn btn-primary btn-sm">Countries</button>
+        </div>
+
+        <!-- Flags button -->
+        <div id="flags">
+            <button type="button" id="flagsbutton" onclick="clickgamemodebutton(); selectedflags();" class="btn btn-primary btn-sm">Flags</button>
+        </div>
+
+    </div>
+
 </div>
 
-<div class = container>
-    <div id = "infobuttongamemode">
+<!-------- Information button structure based on https://codepen.io/EasyBoarder/pen/LZzzjy ---------->
+<!-- Container -->
+<div class="container">
+
+    <!-- Information Button -->
+    <div id="infobuttongamemode">
         <div class="col-md-12">
             <div class="info3">
                 <i class="icon-info-sign"></i>
                 <span class="extra-info3">
-            <b> Countries: </b> Player shown images of locations from countries around the world.
-             <br>
-                    <b> Flags: </b> Player shown images of flags from countries around the world.
-             <br>
-             <br>
-            </span>
+                        <b>Countries:</b> Player shown images of locations from countries around the world.
+                        <br>
+                        <b>Flags:</b> Player shown images of flags from countries around the world.
+                        <br>
+                        <br>
+                    </span>
             </div><br>
         </div>
     </div>
+
 </div>
+
 </body>
 </html>

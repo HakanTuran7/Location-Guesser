@@ -1,9 +1,19 @@
-/*-----Default----*/
-body{
+/*
+
+Name: location.css
+Purpose: Contains all CSS related to HTML elements of the application.
+
+*/
+
+/*---------------------------Default------------------------*/
+
+/*-- Body Of HTML Pages --*/
+body {
     background-color: dodgerblue;
 }
 
-#container{
+/*-- Containers --*/
+#container {
     width: 100%;
     vertical-align: middle;
     display: block;
@@ -11,11 +21,23 @@ body{
     align-items: center;
     margin-top: 5%;
     text-align: center;
+}
 
+/*-- Default Button Selectors --*/
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e; /* set the color you want here */
 }
 
 /*---------------------------index.html------------------------*/
-.container{
+
+/*-- Container including elements --*/
+.container {
     width: 100%;
     vertical-align: middle;
     display: block;
@@ -25,8 +47,9 @@ body{
     text-align: center;
 }
 
-h1{
-    text-align:center;
+/*-- "Location Guesser" Title --*/
+h1 {
+    text-align: center;
     font-size: 12vh;
     font-weight: bold;
     color: white;
@@ -34,21 +57,24 @@ h1{
     -webkit-text-stroke-color: black;
 }
 
-#iconimage{
+/*-- "LG" Icon Image --*/
+#iconimage {
     display: block;
     margin: 0 auto;
     width: 35vh;
     height: 32vh;
 }
 
-.button{
+/*-- "Play" Button --*/
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 3.5vh;
 }
 
-#statbutton{
+/*-- "Player Stats" Button --*/
+#statbutton {
     width: 20vh;
     height: 6.5vh;
     font-size: 2.5vh;
@@ -58,23 +84,32 @@ h1{
     background-color: lightblue;
 }
 
+/*-- "Play" and "Player Stats" Button --*/
 .btn-primary {
     width: 25vh;
     height: 10vh;
-    border-color: Black;
+    border-color: black;
     border-width: 0.8vh;
     background-color: white;
     color: black;
     font-size: 4vh;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #00b3db;
-    border-color: #285e8e; /*set the color you want here*/
-}
 /*---------------------------gamemode.html------------------------*/
-/*------ gamemode icon----------*/
+
+/*-------- Information Button Structure based on https://codepen.io/EasyBoarder/pen/LZzzjy ----------*/
+
+/*-- Info Button Transition  --*/
+* {
+    transition: all 0.2s ease;
+}
+
+/*-- Info Button --*/
+#infobuttongamemode {
+    align-content: center;
+}
+
+/*-- Info Button Data--*/
 .extra-info3 {
     display: none;
     line-height: 2.2vh;
@@ -83,68 +118,85 @@ h1{
     top: 1vh;
 }
 
+/*-- Info Button Expand On Hover --*/
 .info3:hover .extra-info3 {
     display: block;
 }
 
+/*-- Info Button Styling--*/
 .info3 {
     font-size: 3.5vh;
     border-radius: 1.2vh;
     position: relative;
     width: 5%;
-    left:50%;
-    top:50%;
-    Transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 3.5vh;
 }
 
+/*-- Info Button Expand Colour And Size --*/
 .info3:hover {
     background-color: white;
     width: 40vh;
     text-align: center;
 }
 
-#infobuttongamemode{
-    align-content: center;
-}
-
+/*-- Block Container Including Game Mode Buttons --*/
 #block_container {
-    text-align:center;
+    text-align: center;
 }
 
-#countries, #flags {
-    display:inline;
+/*-- Countries And Flags Buttons --*/
+#countries,
+#flags {
+    display: inline;
 }
 
+/*-- Flags Button --*/
 #flagsbutton {
     font-weight: bold;
     -webkit-text-stroke: 0.2vh;
     width: 40vh;
     height: 40vh;
-    margin: 5vh;
-    margin-top: 8vh;
-    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("https://b.kisscc0.com/20180816/ilq/kisscc0-flags-of-the-world-world-flag-national-flag-international-flags-scene-5b7627861b7735.5560956415344700221125.png");
+    margin: 8vh 5vh 5vh;
 
+    /*-- Button background image designed by www.freepik.com --*/
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("https://img.freepik.com/free-photo/close-up-small-greece-flag-isolated_23-2149323143.jpg?t=st=1711383032~exp=1711386632~hmac=8b376d13e3e8b7179c2846e0fa167a0c32f05d79ac04a6428ee27915e5fc268d&w=1060");
 }
 
-#countriesbutton{
+/*-- Countries Button --*/
+#countriesbutton {
     -webkit-text-stroke: 0.2vh;
     font-weight: bold;
     width: 40vh;
     height: 40vh;
-    margin: 5vh;
-    margin-top: 8vh;
-    background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("https://media.istockphoto.com/id/1390066370/vector/earth-globe-atlantic.jpg?s=612x612&w=0&k=20&c=OSgS4jV5cCOBgk8jv0AUoqawzGhRS6hpBJ496ICELoA=");
+    margin: 8vh 5vh 5vh;
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("https://cdn.pixabay.com/photo/2016/04/01/22/32/world-1301744_1280.png");
+}
 
+/*-- Player Prompt --*/
+#tip2 {
+    font-size: 3vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.13vh;
 }
 
 /*---------------------------difficulty.html------------------------*/
-#difficultytitle{
+
+/*-- Title --*/
+#difficultytitle {
     padding-bottom: 2rem;
 }
 
-/*---- difficulty icon----*/
+/*-------- Information Button Structure based on https://codepen.io/EasyBoarder/pen/LZzzjy ----------*/
 
+/*-- Info Button --*/
+#infobuttondifficulty {
+    align-content: center;
+}
+
+/*-- Info Button Data --*/
 .extra-info2 {
     display: none;
     line-height: 2.2vh;
@@ -153,52 +205,69 @@ h1{
     top: 1vh;
 }
 
+/*-- Info Button Expand On Hover --*/
 .info2:hover .extra-info2 {
     display: block;
-// border: 2px solid yellow;
 }
 
+/*-- Info Button Styling--*/
 .info2 {
     font-size: 3.5vh;
     border-radius: 1.2vh;
     position: relative;
     width: 5%;
-    left:50%;
+    left: 50%;
     bottom: 50%;
-    Transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin-top: 3.5vh;
 }
 
+/*-- Info Button Expand Colour And Size --*/
 .info2:hover {
     background-color: white;
     width: 30vh;
     text-align: center;
 }
 
-#infobuttondifficulty{
-// border: 2px solid aquamarine;
-    align-content: center;
+/*-- Player Prompt --*/
+#tip1{
+    font-size: 3vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.13vh;
 }
 
 /*---------------------------rounds.html------------------------*/
-h2{
-    text-align:center;
+
+/*-- Title --*/
+h2 {
+    text-align: center;
     font-size: 9vh;
     font-weight: bold;
     color: white;
-    -webkit-text-stroke-width: 0.4vh ;
+    -webkit-text-stroke-width: 0.4vh;
     -webkit-text-stroke-color: black;
 }
 
-#whiteline{
+/*-- White Line (Split) --*/
+#whiteline {
     margin-top: 5vh;
     border-top: 1rem solid white;
     border-radius: 1rem;
     width: 35vh;
 }
 
+/*-- Player Prompt --*/
+#tip3 {
+    font-size: 3vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.1vh;
+    padding-top: 2vh;
+}
+
 /*---------------------------imageshown.html------------------------*/
-.container3{
+
+/*-- Container Including API Image and Button --*/
+.container3 {
     width: 100%;
     vertical-align: middle;
     display: block;
@@ -206,21 +275,13 @@ h2{
     align-items: center;
 }
 
-h3{
-    text-align:center;
-    font-size: 6vh;
-    font-weight: bold;
-    color: white;
-    margin-top: 5vh;
-    -webkit-text-stroke-width: 0.3vh ;
-    -webkit-text-stroke-color: black;
-}
-
-#roundno{
+/*-- Title Including Round Number--*/
+#roundno {
     margin: 2.5vh;
 }
 
-.img{
+/*-- API Image --*/
+.img {
     max-height: 60vh;
     max-width: 60vw;
     border: 1vh solid white;
@@ -228,6 +289,7 @@ h3{
     margin-right: 50%;
 }
 
+/*-- Div Containing API Image--*/
 .image {
     display: flex;
     flex-direction: column;
@@ -235,7 +297,9 @@ h3{
 }
 
 /*---------------------------game.html------------------------*/
-.container2{
+
+/*-- Container Including SVG MAP --*/
+.container2 {
     vertical-align: middle;
     display: block;
     justify-content: center;
@@ -243,14 +307,27 @@ h3{
     padding-top: 3rem;
 }
 
+/*-- SVG Map --*/
 .image2 {
     max-width: 70%;
     height: auto;
-    width: auto\9; /* ie8 */
+    width: auto;
     margin: auto;
 }
 
-#countryname{
+/*-- Country Selected By Player --*/
+#chosencountry2 {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 0.05rem;
+    -webkit-text-stroke-color: black;
+}
+
+/*-- Div Containing countryname2 id --*/
+#countryname {
     position: relative;
     background-color: lightblue;
     width: 100%;
@@ -260,200 +337,218 @@ h3{
     align-items: center;
 }
 
-#countryname2{
+/*-- Country Name On Hover --*/
+#countryname2 {
     font-size: 2.5vh;
     font-weight: bold;
     margin: 1.3vh;
 }
 
-svg path{
+/*-- SVG Path --*/
+svg path {
     cursor: pointer;
 }
 
-#Progress {
+/*-------- Time Bar Structure based on https://www.w3schools.com/howto/howto_js_progressbar.asp ----------*/
+
+/*-- Time Bar Width And Default Colour --*/
+#Time {
     width: 100%;
     background-color: white;
 }
 
+/*-- Time Bar Tick Width And Colour --*/
 #Bar {
     width: 1%;
     height: 2.5vh;
     background-color: #04AA6D;
 }
 
-#answer, #playerGuess
-{
-    font-size: 3vh;
-    font-weight: bold;
-    -webkit-text-stroke-width: 0.225rem ;
-    padding: 3rem;
-}
-
-#container2{
-    text-align: center;
-}
-
-#infobutton1, #infobutton2{
-    display:inline;
-}
-
-#chosencountry2{
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke-width: 0.05rem ;
-    -webkit-text-stroke-color: black;
-}
-
-/*-------- Information button structure from https://codepen.io/EasyBoarder/pen/LZzzjy ----------*/
-* {
-    transition: all 0.2s ease;
-}
-
-.extra-info {
-    display: none;
-    line-height: 1.9rem;
-    font-size: 1rem;
-    position: absolute;
-    top: 0.5rem;
-    left: 3.5rem;
-}
-
-.info:hover .extra-info {
-    display: block;
-}
-
-.info {
-    font-size: 2rem;
-    padding-left: 0.3rem;
-    width: 1.25rem;
-    border-radius: 1rem;
-}
-
-.info:hover {
-    background-color: white;
-    width: 39rem;
-    text-align: left;
-}
-
-/*---------------------------correctorincorrect.html------------------------*/
-#answer, #playerGuess
-{
-    font-size: 4rem;
-    font-weight: bold;
-    -webkit-text-stroke-width: 0.225rem ;
-    padding: 3rem;
-}
-
-#username, #highestscore{
-    margin-left: 2rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke-width: 0.1rem ;
-    -webkit-text-stroke-color: black;
-}
-
-#continue{
+/*-- Continue Button --*/
+#continue {
     width: 15vh;
     height: 8vh;
     font-size: 2vh;
-    border-color: Black;
+    border-color: black;
     border-width: 0.6vh;
 }
 
-#nextround{
-    width: 20vh;
-    height: 8vh;
-    font-size: 3vh;
-    border-color: Black;
-    border-width: 0.6vh;
-}
+/*---------------------------correctorincorrect.html------------------------*/
 
+/*-- Tick Or Cross Icon --*/
 #tickorcross {
     display: block;
     margin: 0 auto;
-    width: 30vh;
-    height: 30vh;
+    width: 25vh;
+    height: 25vh;
     padding-bottom: 2vh;
+}
+
+/*-- Player Guess and Answer --*/
+h3 {
+    text-align: center;
+    font-size: 6vh;
+    font-weight: bold;
+    color: white;
+    margin-top: 5vh;
+    -webkit-text-stroke-width: 0.3vh;
+    -webkit-text-stroke-color: black;
+}
+
+/*-- Player Guess And Answer Padding --*/
+#answer,
+#playerGuess {
+    padding: 1vh;
+}
+
+/*-- Next Round / End Button --*/
+#nextround {
+    width: 20vh;
+    height: 8vh;
+    font-size: 3vh;
+    border-color: black;
+    border-width: 0.6vh;
 }
 
 /*---------------------------endpage.html------------------------*/
 
-/*---------------------------playerstats.html------------------------*/
-#titlestats{
-    margin: 3vh;
-    text-align:center;
-    font-size: 8vh;
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke-width: 0.35vh ;
-    -webkit-text-stroke-color: black;
-}
-
-#chart{
-    display: flex;
-    margin: 0 auto;
-    width: 30vw;
-    height: 25vw;
-}
-
-#return{
-    width: 15vh;
-    height: 8vh;
-    font-size: 2.5vh;
-    border-color: Black;
-    border-width: 0.5vh;
-}
-
-#autosavemessage{
+/*-- AutoSave Message --*/
+#autosavemessage {
     margin: 3%;
-    text-align:center;
+    text-align: center;
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
     color: white;
-    -webkit-text-stroke-width: 0.15rem ;
+    -webkit-text-stroke-width: 0.15rem;
     -webkit-text-stroke-color: black;
 }
 
-.Row {
-    display: table;
-    width: 70%; /*Optional*/
-    margin-left: 15%;
-    margin-right: 15%;
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-}
+/*---------------------------playerstat.html------------------------*/
 
-.Column {
-    display: table-cell;
+/*-- Title --*/
+#titlestats {
     text-align: center;
-
-}
-
-#highest, #lowest, #avg{
-
-    text-align: center;
-    padding-bottom: 2vh;
-    font-size: 4vh;
+    font-size: 8vh;
     font-weight: bold;
     color: white;
-    -webkit-text-stroke-width: 0.25vh ;
+    -webkit-text-stroke-width: 0.35vh;
     -webkit-text-stroke-color: black;
+    padding-top: 10vh;
 }
 
-#highest{
-    color: lightgreen;
+/*-- Return Button --*/
+#return {
+    width: 15vh;
+    height: 8vh;
+    font-size: 2.5vh;
+    border-color: black;
+    border-width: 0.5vh;
 }
 
-#lowest{
-    color: #dc5349;
+/*-- Container Including Countries And Flags Buttons --*/
+#block_container {
+    text-align: center;
 }
 
-#avg{
-    color: lightgrey;
+/*-- Countries Stats And Flags Stats Button --*/
+#countries,
+#flags {
+    display: inline;
 }
 
+/*-- Flags Stats Button --*/
+#flagsstatbutton {
+    font-weight: bold;
+    -webkit-text-stroke: 0.2vh;
+    width: 40vh;
+    height: 20vh;
+    margin: 2vh 5vh 5vh;
+
+    /*-- Button background image designed by www.freepik.com --*/
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("https://img.freepik.com/free-photo/close-up-small-greece-flag-isolated_23-2149323143.jpg?t=st=1711383032~exp=1711386632~hmac=8b376d13e3e8b7179c2846e0fa167a0c32f05d79ac04a6428ee27915e5fc268d&w=1060");
+}
+
+/*-- Countries Flags Button --*/
+#countriesstatbutton {
+    -webkit-text-stroke: 0.2vh;
+    font-weight: bold;
+    width: 40vh;
+    height: 20vh;
+    margin: 2vh 5vh 5vh;
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), url("https://cdn.pixabay.com/photo/2016/04/01/22/32/world-1301744_1280.png");
+}
+
+/*-- Subtitle (Player Prompt) --*/
+#tip4 {
+    font-size: 3vh;
+    padding-bottom: 2vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.13vh;
+}
+
+/*-- Container Including Prompt And Buttons --*/
+#containerstats {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+}
+
+/*---------------------------playerstatscountries.html & playerstatsflags.html-----------------------*/
+
+/*-- Sub Title "All Rounds" --*/
+.smalltitle {
+    font-size: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.13vh;
+}
+
+/*-- Bock Containers Including All Stats Displayed (Items) --*/
+.block_container {
+    text-align: center;
+}
+
+/*-- Div For Player Stat Item Box --*/
+.item {
+    display: inline;
+}
+
+/*-- Player Stat Box --*/
+.item-box {
+    color: black;
+    font-weight: bold;
+    margin: 5vh 10vh 10vh;
+    border: 0.5vh solid black;
+    font-size: 2.5vh;
+    padding-bottom: 2vh;
+    -webkit-text-stroke-width: 0.13vh;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke: 0.1vh;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+/*-- Player Progress Chart --*/
+#chart{
+    display: flex;
+    padding: 1vh 2vh 1vh 1vh;
+    margin: 2vw auto;
+    width: 30vw;
+    height: 25vw;
+    background-color: white;
+    border: 0.5vh solid black;
+}
+
+/*-- Return Buttons --*/
+#returntostatscountry,
+#returntostatsflags {
+    width: 20vh;
+    height: 6.5vh;
+    font-size: 2.5vh;
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+}

@@ -1,22 +1,63 @@
 <!DOCTYPE html>
+
+<!--
+Page Name: rounds.html
+Purpose: Provides the player the choice to select the number of rounds per game.
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CS408 Project</title>
+    <title>Location Guesser</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
-    <link rel = "stylesheet" href = "location.css">
-    <script src = "location.js"></script>
+    <link rel="stylesheet" href="location.css">
+
+    <!-- JavaScript -->
+    <script src="location.js"></script>
+
 </head>
-<body onload = instanteplayerscore()>
-<div class = "container">
-    <div class = "title"> <h2> How Many Rounds? </h2> </div>
-    <div class = "button"> <button type="button" id = "1round" onclick = "clickroundbutton(); getonecountry();" class="btn btn-primary btn-sm"> 1 </button> </div>
-    <div class = "button"> <button type="button" id = "3round" onclick = "clickroundbutton(); getthreecountry();" class="btn btn-primary btn-sm"> 3 </button> </div>
-    <div class = "button"> <button type="button" id = "5round" onclick = "clickroundbutton(); getfiveecountry();" class="btn btn-primary btn-sm"> 5 </button> </div>
-    <div> <p> <hr id = "whiteline"> </p> </div>
-    <div class = "button"> <button type="button" id = "infinite" onclick = "clickroundbutton(); getinfinitecountry(); selectedinfiniterounds();" class="btn btn-primary btn-sm"> Infinite <b> ∞ </b> </button> </div>
+<body onload="instanteplayerscore()">
+
+<!-- Container -->
+<div class="container">
+
+    <!-- Title -->
+    <div class="title">
+        <h2>How Many Rounds?</h2>
+    </div>
+
+    <!-- Round Buttons -->
+    <div class="button">
+        <button type="button" id="1round" onclick="clickroundbutton(); getonecountry();" class="btn btn-primary btn-sm">1</button>
+    </div>
+    <div class="button">
+        <button type="button" id="3round" onclick="clickroundbutton(); getthreecountry();" class="btn btn-primary btn-sm">3</button>
+    </div>
+    <div class="button">
+        <button type="button" id="5round" onclick="clickroundbutton(); getfiveecountry();" class="btn btn-primary btn-sm">5</button>
+    </div>
+
+    <!-- White Line (split) -->
+    <div>
+        <p>
+        <hr id="whiteline">
+        </p>
+    </div>
+
+    <!-- Infinite Round Button -->
+    <div class="button">
+        <button type="button" id="infinite" onclick="clickroundbutton(); getinfinitecountry(); selectedinfiniterounds();" class="btn btn-primary btn-sm">Infinite <b>∞</b></button>
+    </div>
+
+    <!-- Subtitle (Prompt) -->
+    <div class="subtitle">
+        <h2 id="tip3">Infinite: longest win streak &#128293;</h2>
+    </div>
 
 </div>
+
 </body>
 </html>

@@ -1,19 +1,45 @@
 <!DOCTYPE html>
+
+<!--
+Page Name: imageshown.html
+Purpose: Displays the image fetched from the API.
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Location Guesser</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="../CS408ProjectFiles/lg%20icon.png">
-    <link rel = "stylesheet" href = "location.css">
-    <script src = "location.js"></script>
+    <link rel="stylesheet" href="location.css">
+
+    <!-- JavaScript -->
+    <script src="location.js"></script>
+
 </head>
-<body onload = "updateRound();" id = "body">
-<div class = "title"> <h2 id = roundno > Round 1 </h2> </div>
-<div class = container3>
-<!-- <div class = "button"> <button type="button" id = "x" class="btn btn-primary btn-lg"> request image </button> </div> -->
-<div class = "image"> <img id = "y" class="img"> </div>
-<div class = "button"> <button type="button" id = "continue1" onclick = "clickcontinuebutton()"class="btn btn-primary btn-lg"> Continue </button> </div>
+<body onload="showround();" id="body">
+
+<!-- Title Including Round Number -->
+<div class="title">
+    <h2 id="roundno">Round 1</h2>
 </div>
+
+<!-- Container -->
+<div class="container3">
+
+    <!-- API Image -->
+    <div class="image">
+        <img id="APIimage" class="img">
+    </div>
+
+    <!-- Continue Button -->
+    <div class="button">
+        <button type="button" id="continue1" onclick="clickcontinuebutton()" class="btn btn-primary btn-lg">Continue</button>
+    </div>
+
+</div>
+
 </body>
 </html>
