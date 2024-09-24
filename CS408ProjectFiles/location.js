@@ -341,7 +341,10 @@ function getthreecountry() {
 
     for (let i = 0; i < 3; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
-        countriestemp.pop(selectedcountry);
+        let index = countriestemp.indexOf(selectedcountry);
+        if (index > -1) {
+           countriestemp.splice(index, 1);
+        }
         selectedcountryarray.push(selectedcountry);
     }
     sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
@@ -354,7 +357,10 @@ function getfiveecountry() {
 
     for (let i = 0; i < 5; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
-        countriestemp.pop(selectedcountry);
+        let index = countriestemp.indexOf(selectedcountry);
+        if (index > -1) {
+           countriestemp.splice(index, 1);
+        }
         selectedcountryarray.push(selectedcountry);
     }
     sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
@@ -382,7 +388,10 @@ function getinfinitecountry() {
 
     for (let i = 0; i < 80; i++) {
         let selectedcountry = countriestemp[Math.floor(Math.random() * countriestemp.length)];
-        countriestemp.pop(selectedcountry);
+        let index = countriestemp.indexOf(selectedcountry);
+        if (index > -1) {
+           countriestemp.splice(index, 1);
+        }
         selectedcountryarray.push(selectedcountry);
     }
     sessionStorage.setItem("selectedcountryarray", JSON.stringify(selectedcountryarray));
@@ -430,7 +439,7 @@ async function fetchimage() {
         let selectedcountryarray = sessionStorage.getItem("selectedcountryarray");
         selectedcountryarray = JSON.parse(selectedcountryarray);
         let firstcountry = selectedcountryarray[0].replace(/ /g, "_"); // replaces spaces in country names with underline
-        url = 'https://api.unsplash.com/search/photos?query=' + firstcountry + '&client_id=es03-4SsJY9EfXuRksaoVjjm8I85DGqU3rBXKe7EDYA';
+        url = 'https://api.unsplash.com/search/photos?query=' + firstcountry + 'API_ID_KEY (hidden for safety)';
         let random = Math.floor(Math.random() * 5);
         return fetch(url)
             .then((res) => res.json())
